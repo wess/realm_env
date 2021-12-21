@@ -11,12 +11,6 @@
 
 echo "Setting up your machine..." | status
 
-install_ohmyzsh() {
-  echo "Installing Oh My Zsh..." | status
-
-  sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
-}
-
 install_rust() {
   echo "Installing Rust..." | status
 
@@ -58,7 +52,6 @@ install_packages() {
 
 echo "Setting up your machine..." | status
 
-install_ohmyzsh()
 install_rust()
 install_packages()
 
