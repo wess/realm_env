@@ -17,12 +17,6 @@ install_ohmyzsh() {
   sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 }
 
-install_brew() {
-  echo "Installing brew..." | status
-
-  $(which ruby) -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-}
-
 install_rust() {
   echo "Installing Rust..." | status
 
@@ -65,7 +59,6 @@ install_packages() {
 echo "Setting up your machine..." | status
 
 install_ohmyzsh()
-install_brew()
 install_rust()
 install_packages()
 
