@@ -13,7 +13,7 @@ echo "Loading Realm..."
 
 export LANG="en_US.UTF-8"
 
-STACK_DIR="${REALM_HOME}/stack"
+STACK_DIR="${REALM_HOME}/libexec/stack"
 
 system() {
   source "${STACK_DIR}/paths.sh"
