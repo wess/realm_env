@@ -9,8 +9,6 @@
 # Copywrite (c) 2021 Wess.io
 #
 
-echo "Setting up your machine..." | status
-
 install_rust() {
   echo "Installing Rust..." | status
 
@@ -52,7 +50,6 @@ install_packages() {
 
 echo "Setting up your machine..." | status
 
-install_rust()
-install_packages()
+install_rust && install_packages
 
 echo "$(realm init)" >> $HOME/.zshrc
