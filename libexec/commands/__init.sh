@@ -42,7 +42,7 @@ case $arg in
     source "${SCRIPT_ENVS_DIR}/__rust.sh"
     ;;
   *)
-    system()
+    system
     ;;
 esac
 
