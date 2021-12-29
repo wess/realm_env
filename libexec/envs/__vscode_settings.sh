@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/usr/bin/env zsh
 #
 # __vscode_settings.sh
 # realm
@@ -9,13 +9,21 @@
 # Copywrite (c) 2021 Wess.io
 #
 
+export REALM_AUTHOR="wess"
+export REALM_NAME="wess"
+export REALM_EMAIL="me@wess.io"
+export REALM_COMPANY="Wess.io"
+export REALM_EDITOR="vim"
+
+PROJECT=${PWD##*/}
+
 define PSI_CONFIG <<EOF
 {
   "psi-header.variables": [
     ["projectname", "$PROJECT"],
-    ["author", "$AUTHOR"],
-    ["authoremail", "$AUTHOR_EMAIL"],
-    ["company", "$COMPANY"]
+    ["author", "$REALM_AUTHOR"],
+    ["authoremail", "$REALM_EMAIL"],
+    ["company", "$REALM_COMPANY"]
   ]
 }
 EOF

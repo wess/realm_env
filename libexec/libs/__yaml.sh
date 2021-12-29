@@ -1,3 +1,4 @@
+#!/usr/bin/env bash
 #
 # __yaml.sh
 # alloy
@@ -8,7 +9,6 @@
 # Copywrite (c) 2020 Wess.io
 #
 
-#!/usr/bin/env bash
 
 parse_yaml() {
     local yaml_file=$1

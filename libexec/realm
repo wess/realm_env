@@ -8,14 +8,15 @@
 # 
 # Copywrite (c) 2021 Wess.io
 #
+export LANG="en_US.UTF-8"
 
 export REALM_HOME="${HOME}/.realm"
+export REALM_BIN="${REALM_HOME}/bin"
 export REALM_CONFIG="${REALM_HOME}/config.sh"
 export SCRIPT_ROOT="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
 export SCRIPT_LIBS_DIR=${SCRIPT_ROOT}/libs
 export SCRIPT_ENVS_DIR=${SCRIPT_ROOT}/envs
 export SCRIPT_CMD_DIR=${SCRIPT_ROOT}/commands
-
 
 ## LIBRARIES
 source ${SCRIPT_LIBS_DIR}/__echo.sh
@@ -24,6 +25,9 @@ source ${SCRIPT_LIBS_DIR}/__helpers.sh
 
 ## Check
 source ${SCRIPT_CMD_DIR}/__check.sh
+
+export PATH="${BIN_DIR}:${PATH}"
+
 
 ## Main
 cmd=$1

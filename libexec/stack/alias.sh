@@ -11,4 +11,3 @@
 echo "Loading aliases..."
 
 alias code='code-insiders'
-alias wsc='websocat'

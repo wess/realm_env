@@ -9,10 +9,10 @@
 # Copywrite (c) 2021 Wess.io
 #
 
-
 PROJECT_FILE="$(pwd)/package.json"
-ENV_FILE="$(pwd)/.envrc"
-DIR_ENV=$(cat "$ENV_FILE")
+
+source "${SCRIPT_ENVS_DIR}/__direnv.sh"
+
 LAYOUT="layout node"
 
 define NODE_IGNORE <<EOF
@@ -164,7 +164,7 @@ if [[ -f "$PROJECT_FILE" ]]; then
     source ${SCRIPT_ENVS_DIR}/__gitignore.sh
   fi
 
-  echo "$NODE_IGNORE" >> $GIT_IGNORE
+  echo "$NODE_IGNORE" >> "$GIT_IGNORE"
 fi
 
 

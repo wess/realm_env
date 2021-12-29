@@ -10,8 +10,8 @@
 #
 
 PROJECT_FILE="$(pwd)/Cargo.toml"
-ENV_FILE="$(pwd)/.envrc"
-DIR_ENV=$(cat "$ENV_FILE")
+
+source "${SCRIPT_ENVS_DIR}/__direnv.sh"
 
 define RUST_IGNORE <<EOF
 
@@ -43,11 +43,9 @@ if [[ -f "$PROJECT_FILE" ]]; then
     source ${SCRIPT_ENVS_DIR}/__gitignore.sh
   fi
   
-  echo "$RUST_IGNORE" >> $GIT_IGNORE
+  echo "$RUST_IGNORE" >> "$GIT_IGNORE"
 fi
 
 
 
 unset PROJECT_FILE
-unset ENV_FILE
-unset DIR_ENV
